@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang ='eng'>
+<head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet"
+ type ="text/css" 
+ href ="base.css">
+</head>
+<title> my diary</title> 
+
+   <style>
+       *{
+           box-sizing: border-box;
+
+       }
+    body{
+        background-color: darkolivegreen;;
+    }   
+       nav{
+           background-color:gold;
+           width:100%;
+           overflow: auto;
+       }
+ ul{
+            margin: 0;
+            padding:0;
+            list-style:none;
+        }   
+ li{
+     float: left;
+ }   
+nav a{
+     width: 120px;
+     display: block;
+     text-decoration: none;
+     text-align: center;
+  
+     font-size: 17px;
+     color: black;
+     padding: 20px 10px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+nav a:hover{
+         background-color: blue;
+         color:white;
+     }
+.container {
+    max-width: 950px;
+    margin: auto;
+    background-color: rgb(22, 21, 22);
+    overflow: auto;
+}
+.gallery{
+    margin: 17px;
+    border: 1px solid burlywood;
+    float: left;
+    width: 350px;
+    height: 490px;
+}    
+.gallery img{
+    width: 100%;
+    height: 85%;
+ 
+}
+.desc{
+    padding: 15px;
+    text-align: center;
+}
+
+footer#page_footer{
+clear: both;
+width: 100%;
+display: block;
+text-align: center;
+
+}
+These
+body{background-color: rgb(108, 172, 23);}
+tr:nth-child(even)
+{background-color: blueviolet;}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.topnav {
+  overflow: hidden;
+  background-color:gold;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color:green;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  background-color: tomato;
+}
+
+.sidenav a:hover {
+  color: red;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<div class="topnav" id="myTopnav">
+  <nav>
+    <ul>
+       <li><a href="/">Home </a></li>
+       <li><a href="/">Trending</a></li>
+       <a href="#about">Open Opinion</a>
+       <a href="#home" class="active">Home</a>
+    <a href="#news">Celeb News</a>
+    <a href="#contact">Lifestyle</a>
+    <a href="#about">Current standings</a>
+</ul>
+   </nav>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+    <section id="Post"></section>
+    </section>
+    <a href="videos"><button class ="btn btn-danger"  type ="button" name="button">Music videos</button></a>
+    <a href="RNB"><button class ="btn btn-success" type ="button" name="button">Music</button></a>
+    <a href="movies"><button class ="btn btn-danger" type ="button" name="button">Movies</button></a>
+    <a href=""><button class ="btn btn-success" type ="button" name="button">Sport</button></a>
+    <a href=""><button class ="btn btn-danger" type ="button" name="button">Religion</button></a>
+    <a href=""><button class ="btn btn-primary"type ="button" name="button">Articles and news</button></a>
+    <a href=""><button class ="btn btn-danger" type ="button" name="button">Business</button></a>
+    <a href="school"><button class ="btn btn-success" type ="button" name="button">Education</button></a></br>   
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <h2><a href="#">New releases</a></h2>
+        <h4><a href="#">Marky2</a></h3>
+        <a href="#"> Akon</a>
+        <a href="#">check out more in music......</a>
+      <span style="font-size:30px;cursor:pointer;color: whitesmoke;" onclick="openNav()">&#9776; <h3><a href="biography/{{photos.name}}">{{photos.name}}</a></h3></span>
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+      
+    <class="bg-primary">
+    <input type="text" class="form-control" placeholder="Text input">
+    <button class ="btn btn-success" input type="submit" value="search">search</button>   
+    <div class="container">
+</div>
+
+  
+<div class="jumbotron" style="background-image: image-set();">
+    <h1> Shobie's world "Influencers"</h1>
+</div>
+<h1 style="color:rgb(240, 240, 243);">Lifestyle</h1>
+<div class="container-fluid">
+<div class="container">  
+<ul>
+    {% for photos in object_list %}
+    <div class="gallery">
+        <h3><a href="biography/{{photos.name}}">{{photos.name}}</a></h3>
+        <img src="{{photos.images.url}}" alt="{{ photos.name }}"><br/>     
+    </div>
+    {% endfor%}
+</div>
+</ul>
+</div>
+
+home
+</body>
+    <footer id="page_footer">
+    <p>&copy; 2020 Shobie's World</p>
+      <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href="">Privacy</a></li>
+        </ul>
+      </nav>
+        </footer>
+</html> 
+

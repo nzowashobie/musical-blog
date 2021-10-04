@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang ='eng'>
+<head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% load static %}
+
+
+
+<link rel="stylesheet"
+ type ="text/css" 
+ href ="base.css">
+</head>
+<title> nedzilla/zambian Toplist</title> 
+
+   <style>
+       *{
+           box-sizing: border-box;
+
+       }
+body{
+        background-color: whitesmoke;
+    }   
+       nav{
+           background-color:black;
+           width:100%;
+           overflow: auto;
+       }
+ ul{
+            margin: 0;
+            padding:0;
+            list-style:none;
+
+        }   
+ li{
+     float: left;
+ }   
+nav a{
+     width: 120px;
+     display: block;
+     text-decoration: none;
+     text-align: center;
+     font-size: 17px;
+     color:white;
+     padding: 20px 10px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+nav a:hover{
+         background-color: blue;
+         color:white;
+     }
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: rgb(22, 21, 22);
+    overflow: auto;
+}
+.gallery{
+    margin: 20px;
+    border: 1px solid burlywood;
+    float: left;
+    width: 240px;
+    height: 390px;
+}     
+.gallery img{
+    width: 100%;
+    height: 60%;
+}
+.desc{
+    padding: 15px;
+    text-align: center;
+}
+.jumbotron{padding-top: 20;
+padding-bottom: 50;
+background-color: red;
+color: whitesmoke;
+}
+.jumbotron
+{   
+padding-top: 0px;
+padding-bottom:0px;
+
+background-size: cover;
+height:80px;
+ }
+.newtracks{background-color: red;
+}
+
+.sidenav a:hover {
+    color:black;
+   
+  }
+
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+    .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  background-color: tomato;
+    }
+footer#page_footer{
+clear: both;
+width: 100%;
+display: block;
+text-align: center;
+
+}
+These
+body{background-color: rgb(108, 172, 23);}
+tr:nth-child(even)
+{background-color: blueviolet;}
+
+</style>
+ <nav>
+    <div class="topnav" id="myTopnav">
+     <ul>
+        <li><a href="/">Home </a></li>
+        <li><a href="/">Trending</a></li>
+        <li><a href="/">Opinion</a></li>
+        <li><a href="/">Celeb News</a></li> 
+        <li><a href="/">Lifestyle</a></li>
+
+</ul>
+    </nav>
+<section id="Post"></section><br/>
+
+<div id="mySidenav" class="sidenav">
+    <h2><a href="#">New releases this week: zed;Marky2- Hiphop and r&b;Jagged edge- gospel: caston </a></h2>
+    <a href="">Check out new Hits and News Across the Globe......</a>
+</div> 
+</div>
+   
+<div class="jumbotron">
+    {% load static %}
+ <h2><img src="{% static 'ninja/4.jpg' %}" width="100" height="95"> Zambian music</h2>
+</div>
+</head>
+
+<body>
+<div class="container-fluid">
+<div class="container">  
+<ul>
+    <div class="container background-color:whitesmoke">
+        <ul>
+            {% csrf_token %} 
+            {% for zed in object_list %}
+            <div class="gallery">
+                <h3 style="color:blue;background-color: black;">{{zed.artist}}</h3>
+                <h4 style="color: burlywood;">{{zed.song}}</h4>
+                <img src="{{zed.art.url}}" alt="{{ zed.song }}" width ="" height=""> <br />
+                <a href="{{zed.audio.url}}"><button class ="btn btn-primary" type ="button" name="button"><h6>Play</h6></button></a>
+                <a href="{{zed.audio.url}}"{{albums.art.url}} download><button class ="btn btn-danger" type ="button" name="button">download</button></a>
+                </div>
+            {% endfor %}
+           
+        </ul>
+</ul>
+</div>
+</body>
+<br/>
+<div class="nav new">
+    <nav style="color: black;background-color: royalblue;">
+        <h4>Side Tracks</h4>
+    </nav>
+</div>
+
+<div class="newtracks">
+    <div class="container "> 
+    <nav>
+        {% csrf_token %} 
+        {% load static %}
+        
+   <h4 style="color: red;"><img src="{% static 'ninja/5.jpg' %}" width="100" height="90">Detrick Haddon</h4>
+        <audio controls style="width: 80px;">
+            <source src="{% static 'ninja/Holy Spirit.mp3' %}" width="" height="">
+        </audio> 
+    </nav>  
+    <h4 style="color:red;"><img src="{% static 'ninja/4.jpg' %}" width="100" height="90"> Kizz Daniel</h4>
+    <audio controls style="width: 80px;">
+        <source src="{% static 'ninja/Chek.mp3' %}" width="" height="">
+    </audio> 
+    <h4 style="color:red;"><img src="{% static 'ninja/I5.jpg' %}" width="100" height="90"> Ba Crazy</h4>
+    <audio controls style="width: 80px;">
+        <source src="{% static 'ninja/Gud Night Baby.mp3' %}" width="" height="">
+    </audio> 
+</nav>  
+</div>
+    <footer id="page_footer">
+    <p>&copy; 2020 Shobie's World</p>
+        <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href="">Privacy</a></li>
+        </ul>
+        </nav>
+        </footer>
+</html> 
+

@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang ='eng'>
+<head>
+  
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<title> my diary</title> 
+   <style>
+   *{
+           box-sizing: border-box;
+
+       }
+    body{
+        background-color: darkolivegreen;;
+    }   
+       nav{
+           background-color:gold;
+           width:100%;
+           overflow: auto;
+       }
+ ul{
+            margin: 0;
+            padding:0;
+            list-style:none;
+
+        }   
+ li{
+     float: left;
+ }   
+
+ nav a{
+     width: 120px;
+     display: block;
+     text-decoration: none;
+     text-align: center;
+  
+     font-size: 17px;
+     color: black;
+     padding: 20px 10px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+nav a:hover{
+         background-color: blue;
+         color:white;
+     }  
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgb(22, 21, 22);
+    overflow:auto;
+}
+.gallery{
+    margin: 5px;
+    border: 1px solid burlywood;
+    float: left;
+    width: 300px;
+}    
+.gallery img{
+    width: 50%;
+    height: 80;
+ 
+}
+
+
+
+     footer#page_footer{
+clear: both;
+width: 100%;
+display: block;
+text-align: center;
+}
+These
+body{background-color: rgb(108, 172, 23);}
+tr:nth-child(even)
+{background-color: blueviolet;}
+
+wrapper{
+    width: 100px;
+    margin: 0 auto;
+}
+video {
+    width: 100%;
+}
+</style>
+<nav>
+    <ul>
+       <li><a href="/">Home</a></li>
+       <li><a href="#">Latest</a></li>
+       <li><a href="#">This week</a></li>
+</ul>
+</nav>
+ <section id="Post"></section>
+</section>
+<input type="text" class="form-control" placeholder="Text input">
+<div class="container"></div>
+</div>
+<div class="jumbotron">
+    <h1> Shobie's world</h1>
+    <h2 style="color: rgb(75, 6, 18);">HipHop hooray Videos</h2>
+</div>
+</head>
+<body>
+    <div class="container">
+<ul>
+    {% for hip_vidz in object_list %}
+    <div class="gallery">
+    <h2 style="color: yellow;">{{hip_vidz.artist}}</h2>
+    <video controls>
+        <source src="{{hip_vidz.video.url}}"/>
+    </video><br/>
+    <h3 style="color: whitesmoke;">{{hip_vidz.song}}</h3>
+    <a href="{{hip_vidz.video.url}}" download><button class ="btn btn-danger" type ="button" name="button">download</button></a>
+    </div>
+    {% endfor %}
+</ul>
+</div>
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+</body>
+<section id="sidebar">
+    
+    
+    </section>
+    <footer id="page_footer">
+        <p>&copy; 2020 Shobie's World</p>
+        <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href="">Privacy</a></li>
+        </ul>
+        </nav>
+        </footer>
+    </head>
+    
+
+</head>
+
+</html> 
+

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang ='eng'>
+<head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet"
+ type ="text/css" 
+ href ="base.css">
+</head>
+<title> my diary</title> 
+
+   <style>
+       *{
+           box-sizing: border-box;
+
+       }
+    body{
+        background-color: darkolivegreen;;
+    }   
+       nav{
+           background-color:gold;
+           width:100%;
+           overflow: auto;
+       }
+ ul{
+            margin: 0;
+            padding:0;
+            list-style:none;
+
+        }   
+ li{
+     float: left;
+ }   
+
+ nav a{
+     width: 120px;
+     display: block;
+     text-decoration: none;
+     text-align: center;
+  
+     font-size: 17px;
+     color: black;
+     padding: 20px 10px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+nav a:hover{
+         background-color: blue;
+         color:white;
+     }
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgb(22, 21, 22);
+    overflow: auto;
+}
+.gallery{
+    margin: 10px;
+    border: 1px solid burlywood;
+    float: left;
+    width: 350px;
+    height: 490px;
+}    
+.gallery img{
+    width: 100%;
+    height: 85%;
+ 
+}
+.desc{
+    padding: 15px;
+    text-align: center;
+}
+
+
+
+     footer#page_footer{
+clear: both;
+width: 100%;
+display: block;
+text-align: center;
+
+}
+These
+body{background-color: rgb(108, 172, 23);}
+tr:nth-child(even)
+{background-color: blueviolet;}
+
+</style>
+ <nav>
+     <ul>
+        <li><a href="#">Latest</a></li>
+        <li><a href="#">Classics</a></li>
+        <li><a href="#">This week</a></li>
+</ul>
+    </nav>
+    <section id="Post"></section>
+    </section>
+</head>
+
+<body>
+    <p class="bg-primary">
+    <input type="text" class="form-control" placeholder="Text input">
+    <div class="container">
+
+</div>
+<div class="jumbotron">
+    <h1 style="color:cadetblue;"> Shobie's world</h1>
+</div>
+<h1 style="background-color: darkolivegreen;color:whitesmoke;">{{bio.name}}</h1>
+<div class="container-fluid">
+<div class="container">
+    {% csrf_token %}  
+        {%if bio%}
+        <p style="color:white;">mark2 has released a new album called nvela</p> 
+            <img src="{{bio.images.url}}" width="220"/><p><h5 style="background-color: darkolivegreen; color:black;font-family: 'Arial Narrow';font-size: 16px;">{{bio.Biography}}</h5></p>
+            <h3><a href="{{bio.images.url}}" download><button class ="btn btn-danger" type ="button" name="button">download Jpeg</button></a></h3> 
+            {%else%}
+            <h1>no DATA</h1>
+            {%endif%}   
+  
+</div>
+</body>
+    <footer id="page_footer">
+        <p>&copy; 2020 Shobie's World</p>
+        <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href="">Privacy</a></li>
+        </ul>
+        </nav>
+        </footer>
+</html> 
+

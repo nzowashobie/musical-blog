@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang ='eng'>
+<head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% load static %}
+<link rel="stylesheet"
+ type ="text/css" 
+ href ="base.css">
+</head>
+<title> nedzilla/Rnb Toplist</title> 
+
+   <style>
+       *{
+           box-sizing: border-box;
+
+       }
+body{
+        background-color: whitesmoke;
+    }   
+       nav{
+           background-color:black;
+           width:100%;
+           overflow: auto;
+       }
+ ul{
+            margin: 0;
+            padding:0;
+            list-style:none;
+
+        }   
+ li{
+     float: left;
+ }   
+nav a{
+     width: 120px;
+     display: block;
+     text-decoration: none;
+     text-align: center;
+     font-size: 17px;
+     color:white;
+     padding: 20px 10px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+nav a:hover{
+         background-color: blue;
+         color:white;
+     }
+.container {
+    max-width: 400px;
+    float:left;
+    top: 50;
+    margin-left: 0;
+    overflow: auto;
+    background-color:gainsboro;
+}
+
+.container1 {
+   
+    background-color:gainsboro;
+}
+
+
+.gallery{
+    margin: 55px;
+    border: 1px solid burlywood;
+    float: left;
+    margin-left: 15%;
+    width: 170px;
+    height: 235px;
+}     
+.gallery img{
+    width: 100%;
+    height: 60%;
+}
+.desc{
+    padding: 15px;
+    text-align: center;
+}
+.jumbotron{padding-top: 20;
+padding-bottom: 50;
+background-color: red;
+color: whitesmoke;
+}
+.jumbotron
+{   
+padding-top: 0px;
+padding-bottom:0px;
+
+background-size: cover;
+height:80px;
+ }
+.newtracks{background-color: royalblue;
+}
+.newtracks a:hover{background-color: white;}
+.newtracks img{float: left;
+  width: 17%; 
+  height: 10%;
+  margin-left: 4%;
+  border: 3px solid burlywood;
+  }
+.newtracks2 img{float: left;
+  width: 17%; 
+  height: 10%; 
+  border: 3px solid burlywood;
+  margin-left: 1%;
+}
+
+.snav {
+  height: 180%;
+  width: 0;
+  position: absolute;
+  z-index: auto;
+  top: 50;
+  right: 0;
+ 
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.snav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  height: 90%;
+}
+.snav a:hover {
+  color: #f1f1f1;
+}
+.snav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+
+}
+
+.snav nav{background-color: cadetblue;
+margin: 2px;
+border-color: cornflowerblue;
+height: 290;
+
+}
+.snav img{
+    width: 100%;
+    height:20%;
+}
+.snav1{margin-left: 55%;}
+
+footer#page_footer{
+clear: both;
+width: 100%;
+display: block;
+text-align: center;
+background-color: whitesmoke;
+color: red;
+
+}
+.jumbo nav{background-color: blue;
+}
+These
+body{background-color: rgb(108, 172, 23);}
+tr:nth-child(even)
+{background-color: blueviolet;}
+
+</style>
+ <nav>
+     <ul>
+        <li><a href="/">Home </a></li>
+        <li><a href="classic_rnb">90's R&B</a></li>
+        <li><a href="throw_back">Throw Back</a></li>
+</ul>
+    </nav>
+<section id="Post"></section><br/>
+    </section>
+<div class="jumbo">
+<nav>
+<ul>
+   <li> <a href="{% url 'index' %}"><button class ="btn btn-danger" type ="button" name="button">albums</button></a></li>
+   <li> <a href="hiphop"><button class ="btn btn-primary" type ="button" name="button">Hip Hop</button></a></li>
+   <li><a href="afrobeats"><button class ="btn btn-success" type ="button" name="button">Africa Rythm</button></a></li>
+   <li> <a href="gospel"><button class ="btn btn-success" type ="button" name="button">Gospel</button></a></li>
+   <li><a href="zedbeats"><button class ="btn btn-primary" type ="button" name="button">Lifestyle</button></a></li>
+
+</ul>
+</nav>
+</div>
+    <form action="" method="get">
+        <h4 style="color:hsl(0, 4%, 5%);"><input name="q" type="text" placeholder="Search..."></h4>
+        <button class ="btn btn-success" input type="submit" value="search">search</button>   
+    </form> 
+<div class="jumbotron">
+{% load static %}
+ <h2><img src="{% static 'ninja/5.jpg' %}" width="100" height="95"> R&B Top List</h2>
+</div>
+</head>
+
+<body>
+<div class="snav1">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+<script>
+  function openNav() {
+    document.getElementById("mySide").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySide").style.width = "0";
+  }
+</script>
+
+    <div id="mySide" class="snav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <nav>
+            <h4 style="color: white;">Get the best of Music right here!</h4>
+            <img src="{% static 'ninja/rnb.jpg' %}" width="" height=""> 
+        </nav>
+        <nav>     
+        <h4><a href="throw_back"><button class ="btn btn-primary" type ="button" name="button">throw_back Jams</button></a></h4>
+            <img src="{% static 'ninja/imx.jpg' %}" width="" height=""> 
+        </nav> 
+      <nav>
+        <img src="{% static 'ninja/Toni-Braxton.jpg' %}" width="" height=""> 
+    </nav> 
+    <nav>
+       <h5 style="color: white;"><p>The new evolution of R&B, <strong>beats</strong> after beats <strong> artist have hit the scene</strong></p></h5>
+   </nav> 
+  </div>
+    
+<div class="container-fluid">
+
+    <div class="container">
+        <ul>
+            {% csrf_token %} 
+            {% for  Tracklist in object_list %}
+            <div class="gallery">
+                <h4 style="color: burlywood;">{{Tracklist.song}}</h4>
+                <h2 style="color:blue">{{Tracklist.artist}}</h2>
+                <img src="{{ Tracklist.art.url}}" alt="{{ Tracklist.song }}" width ="" height=""> <br />
+                <a href="{{Tracklist.audio.url}}"><button class ="btn btn-primary" type ="button" name="button"><h5>Play</h5></button></a>
+                <a href="{{Tracklist.audio.url}}" download><button class ="btn btn-danger" type ="button" name="button">download</button></a>
+                </div>
+            {% endfor %}
+    </ul>
+
+</div>
+</div>
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+<div class="navnew">
+    <nav style="color: black;background-color: royalblue;">
+        Latest tracks
+    </nav>   
+</div>
+
+<div class="container1"> 
+    <nav>
+        <table class="table table-striped">
+            <thead>
+        
+            </thead>
+            <tbody>
+                <tr> 
+                    <td><h4 style="color:red;"><img src="{% static 'ninja/B2k.jpg' %}" width="120" height="100"> </td> 
+                    <td><p><h4 style="color: red;"> B2K feat P Diddy | Bump Bump</h4></p><a href="{% static 'ninja/B2k_ft_P_Diddy_-_Bump_Bump_Bump_.mp3' %}" ><p><h5 style="color: red;">Play</h4></a></td>
+                        
+                    <td><h4 style="color:red;"><img src="{% static 'ninja/ruff endz.jpg' %}" width="120" height="100">  </td> 
+                    <td><p><h4 style="color: red;"> Ruff Endz |  Will you be</h4></p><a  href="{% static 'ninja/Ruff Endz.mp3' %}" ><p><h5 style="color: red;">Play</h4></a></td> 
+                        
+                    <td><h4 style="color:red;"><img src="{% static 'ninja/JE.jpg' %}" width="width="120" height="100"> </td> 
+                    <td><p><h4 style="color: red;"> Jagged edge | Decided</h4></p><a href="{% static 'ninja/Decided.mp3' %}" ><h5 style="color: red;"><p><h5 style="color: red;">Play</h4></a></td>
+                    </tr>
+                </tbody>
+            </table>	           
+    </nav>
+</div>
+<div class="newtracks">
+    {% load static %} 
+    <a href="biography/Chris Brown"><img src="{% static 'ninja/chris brown.jpg' %}" width="" height=""></a>
+    <div class="newtracks2">
+    <img src="{% static 'ninja/kelly.jpg' %}" width="" height="">
+     <img src="{% static 'ninja/brandy.jpg' %}" width="" height="">
+     <img src="{% static 'ninja/tamia.jpg' %}" width="" height="">
+     <img src="{% static 'ninja/v.jpg' %}" width="" height="">
+    </body>
+    <footer id="page_footer">
+    <p>&copy; 2020 Shobie's World</p>
+        <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href="">Privacy</a></li>
+        </ul>
+        </nav>
+    </footer>
+</html> 
+
