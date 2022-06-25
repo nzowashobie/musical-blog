@@ -1,4 +1,4 @@
-altgraph                   0.17
+
 amqp                       2.6.1
 appdirs                    1.4.4
 asgiref                    3.2.10
