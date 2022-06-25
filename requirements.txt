@@ -55,12 +55,6 @@ idna==2.10
 importlib-metadata==1.6.1
 importlib-resources==2.0.1
 jdcal==1.4.1
-Kivy==1.11.1
-kivy-deps.angle==0.3.0
-kivy-deps.glew==0.3.0
-kivy-deps.gstreamer==0.3.1
-kivy-deps.sdl2==0.3.1
-Kivy-Garden==0.1.4
 kombu==4.6.11
 libmagic==1.0
 mod==0.3.0
